@@ -19,6 +19,10 @@
         "match": "allSponsorships",
         "replace": ""
     },
+    "similarplaylist": {
+        "match": ",(.\\.isOwnedBySelf&&)((\\(.{0,11}\\)|..createElement)\\(.{1,3}Fragment,.+?{(uri:.|spec:.),(uri:.|spec:.).+?contextmenu.create-similar-playlist\"\\)}\\),)",
+        "replace": ",$2$1"
+    },
     "connectunlock": {
         "match": [
             " connect-device-list-item--disabled",
@@ -33,10 +37,6 @@
             "return false$2"
         ]
     },
-    "downloadquality": {
-        "match": "(\\(.,..jsxs\\)\\(.{1,3}|..createElement\\(.{1,4}),{filterMatchQuery:.{1,6}get\\(\"desktop.settings.downloadQuality.title.+?(children:.{1,2}\\(.,.\\).+?,|xe\\(.,.\\).+?,)",
-        "replace": ""
-    },
     "discriptions": {
         "match": "((..createElement|children:\\(.{1,7}\\))\\(....,{source:).....get\\(\"about.copyright\",.\\),paragraphClassName:.}\\)",
         "replace": "$1\"<h3>More about SpotX</h3><a href='https://github.com/SpotX-CLI/SpotX-Win'>Github</a><br/><a href='https://telegra.ph/SpotX-FAQ-09-19'>FAQ</a><br/><a href='https://t.me/spotify_windows_mod'>Telegram channel</a><br/><a href='https://github.com/SpotX-CLI/SpotX-Win/issues/new?assignees=&labels=%E2%9D%8C+bug&template=bug_report.yml'>Create an issue report</a><br> <br/><h4>DISCLAIMER</h4>SpotX is a modified version of the official Spotify client, provided as an evaluation version, you use it at your own risk.\"})"
@@ -44,6 +44,31 @@
     "podcastsoff": {
         "match": "(\\!Array.isArray\\(.\\)\\|\\|.===..length)",
         "replace": "$1||e.children[0].key.includes('episode')||e.children[0].key.includes('show')"
+    },
+    "downloadquality": {
+        "match": "(\\(.,..jsxs\\)\\(.{1,3}|..createElement\\(.{1,4}),{filterMatchQuery:.{1,6}get\\(\"desktop.settings.downloadQuality.title.+?(children:.{1,2}\\(.,.\\).+?,|xe\\(.,.\\).+?,)",
+        "replace": ""
+    },
+    "downloadicon": {
+        "add": " .BKsbV2Xl786X9a09XROH{display:none}"
+    },
+    "submenudownload": {
+        "add": " button.wC9sIed7pfp47wZbmU6m.pzkhLqffqF_4hucrVVQA{display:none}"
+    },
+    "veryhighstream": {
+        "add": " #desktop\\.settings\\.streamingQuality>option:nth-child(5) {display:none}"
+    },
+    "navaltfix": {
+        "add": [
+            " .nav-alt .Root__top-container {background: #00000085;gap: 6px;padding: 8px;}",
+            " .Root__fixed-top-bar {background-color: #00000000}'"
+        ]
+    },
+    "collaboraticon": {
+        "add": " .X1lXSiVj0pzhQCUo_72A{display:none}"
+    },
+    "byspotx": {
+        "add": "// Patched by SpotX"
     },
     "offrujs": {
         "match": "(\\[a\\.go\\.en,)(.+?\\])",
@@ -90,5 +115,167 @@
             "",
             "[dir=ltr]"
         ]
+    },
+    "exp": {
+        "likedartist": {
+            "match": [
+                "(Enable Liked Songs section on Artist page\",default:)(!1)"
+            ],
+            "replace": [
+                "$1true"
+            ]
+        },
+        "blockusers": {
+            "match": [
+                "(Enable block users feature in clientX\",default:)(!1)"
+            ],
+            "replace": [
+                "$1true"
+            ]
+        },
+        "quicksilver": {
+            "match": [
+                "(Enables quicksilver in-app messaging modal\",default:)(!0)"
+            ],
+            "replace": [
+                "$1false"
+            ]
+        },
+        "ignorrec": {
+            "match": [
+                "(Enable Ignore In Recommendations for desktop and web\",default:)(!1)"
+            ],
+            "replace": [
+                "$1true"
+            ]
+        },
+        "prod": {
+            "match": [
+                "(Enable Playlist Permissions flows for Prod\",default:)(!1)"
+            ],
+            "replace": [
+                "$1true"
+            ]
+        },
+        "showingballoons": {
+            "match": [
+                "(Enable showing balloons on album release date anniversaries\",default:)(!1)"
+            ],
+            "replace": [
+                "$1true"
+            ]
+        },
+        "enhanceliked": {
+            "match": [
+                "(Enable Enhance Liked Songs UI and functionality\",default:)(!1)"
+            ],
+            "replace": [
+                "$1true"
+            ]
+        },
+        "enhanceplaylist": {
+            "match": [
+                "(Enable Enhance Playlist UI and functionality for end-users\",default:)(!1)"
+            ],
+            "replace": [
+                "$1true"
+            ]
+        },
+        "disographyartist": {
+            "match": [
+                "(Enable a condensed disography shelf on artist pages\",default:)(!1)"
+            ],
+            "replace": [
+                "$1true"
+            ]
+        },
+        "lyricsmatch": {
+            "match": [
+                "(Enable Lyrics match labels in search results\",default:)(!1)"
+            ],
+            "replace": [
+                "$1true"
+            ]
+        },
+        "equalizer": {
+            "match": [
+                "(Enable audio equalizer for Desktop and Web Player\",default:)(!1)"
+            ],
+            "replace": [
+                "$1true"
+            ]
+        },
+        "devicepickerold": {
+            "match": [
+                "(Enable showing a new and improved device picker UI\",default:)(!.)"
+            ],
+            "replace": [
+                "$1false"
+            ]
+        },
+        "newhome": {
+            "match": [
+                "(Enable the new home structure and navigation\",values:.,default:)(..DISABLED)"
+            ],
+            "replace": [
+                "$1true"
+            ]
+        },
+        "madeforyou": {
+            "match": [
+                "(Show \"Made For You\" entry point in the left sidebar.,default:)(!1)"
+            ],
+            "replace": [
+                "$1true"
+            ]
+        },
+        "clearcache": {
+            "match": [
+                "(Enable option in settings to clear all downloads\",default:)(!1)"
+            ],
+            "replace": [
+                "$1true"
+            ]
+        },
+        "carouselsonhome": {
+            "match": [
+                "(Use carousels on Home\",default:)(!1)"
+            ],
+            "replace": [
+                "$1true"
+            ]
+        },
+        "leftsidebar": {
+            "match": [
+                "(Enable Your Library X view of the left sidebar\",default:)(!1)"
+            ],
+            "replace": [
+                "$1true"
+            ]
+        },
+        "lyricsenabled": {
+            "match": [
+                "(With this enabled, clients will check whether tracks have lyrics available\",default:)(!1)"
+            ],
+            "replace": [
+                "$1true"
+            ]
+        },
+        "playlistcreat": {
+            "match": [
+                "(Enables new playlist creation flow in Web Player and DesktopX\",default:)(!1)"
+            ],
+            "replace": [
+                "$1true"
+            ]
+        },
+        "searchbox": {
+            "match": [
+                "(Adds a search box so users are able to filter playlists when trying to add songs to a playlist using the contextmenu\",default:)(!1)"
+            ],
+            "replace": [
+                "$1true"
+            ]
+        }
     }
 }
