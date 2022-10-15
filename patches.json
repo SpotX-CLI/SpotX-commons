@@ -20,20 +20,18 @@
         "replace": ""
     },
     "connectunlock": {
-        "match": " connect-device-list-item--disabled",
-        "replace": ""
-    },
-    "connectunlock2": {
-        "match": "connect-picker.unavailable-to-control",
-        "replace": "spotify-connect"
-    },
-    "connectunlock3": {
-        "match": "(className:.,disabled:)(..)",
-        "replace": "$1false"
-    },
-    "connectunlock4": {
-        "match": "return (..isDisabled)(\\?(..createElement|\\(.{1,10}\\))\\(..,)",
-        "replace": "return false$2"
+        "match": [
+            " connect-device-list-item--disabled",
+            "connect-picker.unavailable-to-control",
+            "(className:.,disabled:)(..)",
+            "return (..isDisabled)(\\?(..createElement|\\(.{1,10}\\))\\(..,)"
+        ],
+        "replace": [
+            "",
+            "spotify-connect",
+            "$1false",
+            "return false$2"
+        ]
     },
     "downloadquality": {
         "match": "(\\(.,..jsxs\\)\\(.{1,3}|..createElement\\(.{1,4}),{filterMatchQuery:.{1,6}get\\(\"desktop.settings.downloadQuality.title.+?(children:.{1,2}\\(.,.\\).+?,|xe\\(.,.\\).+?,)",
@@ -42,5 +40,55 @@
     "discriptions": {
         "match": "((..createElement|children:\\(.{1,7}\\))\\(....,{source:).....get\\(\"about.copyright\",.\\),paragraphClassName:.}\\)",
         "replace": "$1\"<h3>More about SpotX</h3><a href='https://github.com/SpotX-CLI/SpotX-Win'>Github</a><br/><a href='https://telegra.ph/SpotX-FAQ-09-19'>FAQ</a><br/><a href='https://t.me/spotify_windows_mod'>Telegram channel</a><br/><a href='https://github.com/SpotX-CLI/SpotX-Win/issues/new?assignees=&labels=%E2%9D%8C+bug&template=bug_report.yml'>Create an issue report</a><br> <br/><h4>DISCLAIMER</h4>SpotX is a modified version of the official Spotify client, provided as an evaluation version, you use it at your own risk.\"})"
+    },
+    "podcastsoff": {
+        "match": "(\\!Array.isArray\\(.\\)\\|\\|.===..length)",
+        "replace": "$1||e.children[0].key.includes('episode')||e.children[0].key.includes('show')"
+    },
+    "offrujs": {
+        "match": "(\\[a\\.go\\.en,)(.+?\\])",
+        "replace": "$1a.go.ru]"
+    },
+    "disablesentry": {
+        "match": "(?:prototype\\.)?bindClient(?:=function)?\\(\\w+\\)\\{",
+        "replace": "${0}return;"
+    },
+    "disablelogging": {
+        "match": "sp://logging/v3/\\w+",
+        "replace": ""
+    },
+    "removertl": {
+        "match": [
+            "}\\[dir=ltr\\]\\s?([.a-zA-Z\\d[_]+?,\\[dir=ltr\\])",
+            "}\\[dir=ltr\\]\\s?",
+            "html\\[dir=ltr\\]",
+            ",\\s?\\[dir=rtl\\].+?(\\{.+?\\})",
+            "[\\w\\-\\.]+\\[dir=rtl\\].+?\\{.+?\\}",
+            "\\}\\[lang=ar\\].+?\\{.+?\\}",
+            "\\}\\[dir=rtl\\].+?\\{.+?\\}",
+            "\\}html\\[dir=rtl\\].+?\\{.+?\\}",
+            "\\}html\\[lang=ar\\].+?\\{.+?\\}",
+            "\\[lang=ar\\].+?\\{.+?\\}",
+            "html\\[dir=rtl\\].+?\\{.+?\\}",
+            "html\\[lang=ar\\].+?\\{.+?\\}",
+            "\\[dir=rtl\\].+?\\{.+?\\}",
+            "\\[dir=str\\]"
+        ],
+        "replace": [
+            "}[dir=str] $1",
+            "} ",
+            "html",
+            "$1",
+            "",
+            "}",
+            "}",
+            "}",
+            "}",
+            "",
+            "",
+            "",
+            "",
+            "[dir=ltr]"
+        ]
     }
 }
