@@ -1,43 +1,85 @@
 {
     "bilboard": {
+        "versions": {
+            "from": "1.1.70",
+            "do": ""
+        },
         "match": ".(\\?\\[.{1,6}[a-zA-Z].leaderboard,)",
         "replace": "false$1"
     },
     "fullscreen": {
+        "versions": {
+            "from": "1.1.58",
+            "do": ""
+        },
         "match": "(return|.=.=>)\"free\"===(.+?)(return|.=.=>)\"premium\"===",
         "replace": "$1\"premium\"===$2$3\"free\"==="
     },
     "audioads": {
-        "match": "(case .:)return this.enabled=...+?(;case .:this.subscription=this.audioApi).+?(;case .)",
-        "replace": "$1$2.cosmosConnector.increaseStreamTime(-100000000000)$3"
+        "version": {
+            "from": "1.1.58",
+            "do": ""
+        },
+        "match": "(case .:|async enable\\(.\\){)(this.enabled=.+?\\(.{1,3},\"audio\"\\),|return this.enabled=...+?\\(.{1,3},\"audio\"\\))((;case 4:)?this.subscription=this.audioApi).+?this.onAdMessage\\)",
+        "replace": "$1$3.cosmosConnector.increaseStreamTime(-100000000000)"
     },
     "emptyblock": {
+        "version": {
+            "from": "1.1.58",
+            "do": ""
+        },
         "match": "adsEnabled:!0",
         "replace": "adsEnabled:!1"
     },
     "playlistsponsor": {
+        "version": {
+            "from": "1.1.58",
+            "do": ""
+        },
         "match": "allSponsorships",
         "replace": ""
     },
     "similarplaylist": {
-        "match": ",(.\\.isOwnedBySelf&&)((\\(.{0,11}\\)|..createElement)\\(.{1,3}Fragment,.+?{(uri:.|spec:.),(uri:.|spec:.).+?contextmenu.create-similar-playlist\"\\)}\\),)",
+        "version": {
+            "from": "1.1.85",
+            "do": ""
+        },
+        "match": ",(.\\.isOwnedBySelf&&)((\\(.{0,11}\\)|..createElement)\\(.{1,3}Fragment,.+?{(uri:.|).+?contextmenu.create-similar-playlist\"\\)}\\),)",
         "replace": ",$2$1"
     },
-    "connectunlock": {
+    "connectold": {
+        "version": {
+            "from": "1.1.70",
+            "do": ""
+        },
         "match": [
             " connect-device-list-item--disabled",
             "connect-picker.unavailable-to-control",
-            "(className:.,disabled:)(..)",
-            "return (..isDisabled)(\\?(..createElement|\\(.{1,10}\\))\\(..,)"
+            "(\"button\",{className:.,disabled:)(..)"
         ],
         "replace": [
             "",
             "spotify-connect",
-            "$1false",
+            "$1false"
+        ]
+    },
+    "connectnew": {
+        "version": {
+            "from": "1.1.91",
+            "do": ""
+        },
+        "match": [
+            "return (..isDisabled)(\\?(..createElement|\\(.{1,10}\\))\\(..,)"
+        ],
+        "replace": [
             "return false$2"
         ]
     },
     "discriptions": {
+        "version": {
+            "from": "1.1.70",
+            "do": ""
+        },
         "match": "((..createElement|children:\\(.{1,7}\\))\\(....,{source:).....get\\(\"about.copyright\",.\\),paragraphClassName:.}\\)",
         "replace": "$1\"<h3>More about SpotX</h3><a href='https://github.com/SpotX-CLI/SpotX-Win'>Github</a><br/><a href='https://telegra.ph/SpotX-FAQ-09-19'>FAQ</a><br/><a href='https://t.me/spotify_windows_mod'>Telegram channel</a><br/><a href='https://github.com/SpotX-CLI/SpotX-Win/issues/new?assignees=&labels=%E2%9D%8C+bug&template=bug_report.yml'>Create an issue report</a><br> <br/><h4>DISCLAIMER</h4>SpotX is a modified version of the official Spotify client, provided as an evaluation version, you use it at your own risk.\"})"
     },
@@ -46,43 +88,83 @@
         "replace": "$1||e.children[0].key.includes('episode')||e.children[0].key.includes('show')"
     },
     "downloadquality": {
-        "match": "(\\(.,..jsxs\\)\\(.{1,3}|..createElement\\(.{1,4}),{filterMatchQuery:.{1,6}get\\(\"desktop.settings.downloadQuality.title.+?(children:.{1,2}\\(.,.\\).+?,|xe\\(.,.\\).+?,)",
+        "version": {
+            "from": "1.1.70",
+            "do": ""
+        },
+        "match": "(\\(.,..jsxs\\)\\(.{1,3}|(.\\(\\).|..)createElement\\(.{1,4}),{(filterMatchQuery|filter:.,title|(variant:\"viola\",semanticColor:\"textSubdued\"|..:\"span\",variant:.{3,6}mesto,color:.{3,6}),htmlFor:\"desktop.settings.downloadQuality.+?).{1,6}get\\(\"desktop.settings.downloadQuality.title.+?(children:.{1,2}\\(.,.\\).+?,|\\(.,.\\){3,4},|,.\\)}},.\\(.,.\\)\\),)",
         "replace": ""
     },
     "downloadicon": {
+        "version": {
+            "from": "1.1.74",
+            "do": ""
+        },
         "add": " .BKsbV2Xl786X9a09XROH{display:none}"
     },
     "submenudownload": {
+        "version": {
+            "from": "1.1.74",
+            "do": ""
+        },
         "add": " button.wC9sIed7pfp47wZbmU6m.pzkhLqffqF_4hucrVVQA{display:none}"
+    },
+    "version": {
+        "from": "1.1.70",
+        "do": ""
     },
     "veryhighstream": {
         "add": " #desktop\\.settings\\.streamingQuality>option:nth-child(5) {display:none}"
     },
     "navaltfix": {
+        "version": {
+            "from": "1.1.94",
+            "do": ""
+        },
         "add": [
             " .nav-alt .Root__top-container {background: #00000085;gap: 6px;padding: 8px;}",
             " .Root__fixed-top-bar {background-color: #00000000}'"
         ]
     },
     "collaboraticon": {
+        "version": {
+            "from": "1.1.83",
+            "do": ""
+        },
         "add": " .X1lXSiVj0pzhQCUo_72A{display:none}"
     },
     "byspotx": {
         "add": "// Patched by SpotX"
     },
     "offrujs": {
+        "version": {
+            "from": "1.1.92",
+            "do": ""
+        },
         "match": "(\\[a\\.go\\.en,)(.+?\\])",
         "replace": "$1a.go.ru]"
     },
     "disablesentry": {
+        "version": {
+            "from": "1.1.70",
+            "do": ""
+        },
         "match": "(?:prototype\\.)?bindClient(?:=function)?\\(\\w+\\)\\{",
         "replace": "${0}return;"
     },
     "disablelogging": {
+        "version": {
+            "from": "1.1.70",
+            "do": ""
+        },
         "match": "sp://logging/v3/\\w+",
         "replace": ""
     },
     "removertl": {
+        "version": {
+            "from": "1.1.70",
+            "do": ""
+        },
         "match": [
             "}\\[dir=ltr\\]\\s?([.a-zA-Z\\d[_]+?,\\[dir=ltr\\])",
             "}\\[dir=ltr\\]\\s?",
