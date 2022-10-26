@@ -163,7 +163,7 @@
                 }
             },
             "match": [
-                "(H2J92dVdr0ykdOX5azL1{color:)var\\(--lyrics-color-active\\)",
+                "(H2J92dVdr0ykdOX5azL1{color:)var\\(--lyrics-color-active\\);opacity:..",
                 "((TDPh45khCfG51fNwNIiw|E64X_eoy6xsJmDdKKHja){color:)var\\(--lyrics-color-active\\)",
                 "(NHVfxGs2HwmI_fly2JC4{color:)var\\(--lyrics-color-inactive\\)",
                 "(NHVfxGs2HwmI_fly2JC4:hover{color:)var\\(--lyrics-color-active\\)",
@@ -171,12 +171,12 @@
                 "(iq4cgi0YEKr6DGaTtzUj{color:)var\\(--lyrics-color-inactive\\)"
             ],
             "replace": [
-                "$1$pasttextR",
-                "$1$currentR",
-                "$1$nextR",
-                "$1$hoverR",
-                "$backgroundR",
-                "1$maxmatchR"
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
             ]
         },
         "navaltfix": {
