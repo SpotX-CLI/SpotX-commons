@@ -101,11 +101,83 @@
         },
         "podcastsoff": {
             "version": {
+                "from": "1.1.70",
+                "do": "1.1.92"
+            },
+            "match": "withQueryParameters(e){return this.queryParameters=e,this}",
+            "replace": "withQueryParameters(e){return this.queryParameters=(e.types?{...e, types: e.types.split(\",\").filter(_ => ![\"episode\",\"show\"].includes(_)).join(\",\")}:e),this}"
+        },
+        "podcastsoff2": {
+            "version": {
                 "from": "1.1.93",
-                "do": ""
+                "do": "1.1.96"
             },
             "match": "(\\!Array.isArray\\(.\\)\\|\\|.===..length)",
             "replace": "$1||e.children[0].key.includes('episode')||e.children[0].key.includes('show')"
+        },
+        "podcastsoff3": {
+            "version": {
+                "from": "1.1.97",
+                "do": ""
+            },
+            "match": "(\\!Array.isArray\\(.\\)\\|\\|.===..length)",
+            "replace": "$1||e[0].key.includes('episode')||e[0].key.includes('show')"
+        },
+        "lyricscolor": {
+            "version": {
+                "from": "1.1.70",
+                "do": ""
+            },
+            "theme": {
+                "1": {
+                    "pasttext": "#ffffff4a",
+                    "current": "#ffffffc7",
+                    "next": "#ffffff4a",
+                    "hover": "#ffffffc7",
+                    "background": "#121212",
+                    "maxmatch": "#ffffff94"
+                },
+                "2": {
+                    "pasttext": "#ffffffb8",
+                    "current": "#ffffffc7",
+                    "next": "#322319",
+                    "hover": "#ffffffc7",
+                    "background": "#956b4b",
+                    "maxmatch": "#322319"
+                },
+                "3": {
+                    "pasttext": "#ffffff6b",
+                    "current": "#ffffffc7",
+                    "next": "#2e080b",
+                    "hover": "#ffffffc7",
+                    "background": "#c62736f2",
+                    "maxmatch": "#2e080b"
+                },
+                "4": {
+                    "pasttext": "#E40909B3",
+                    "current": "#C2C2C2",
+                    "next": "#CA861A",
+                    "hover": "#0FD40F",
+                    "background": "#121212",
+                    "maxmatch": "#C2C2C2"
+                }
+            },
+            "match": [
+                "(H2J92dVdr0ykdOX5azL1{color:)var\\(--lyrics-color-active\\)",
+                "((TDPh45khCfG51fNwNIiw|E64X_eoy6xsJmDdKKHja){color:)var\\(--lyrics-color-active\\)",
+                "(NHVfxGs2HwmI_fly2JC4{color:)var\\(--lyrics-color-inactive\\)",
+                "(NHVfxGs2HwmI_fly2JC4:hover{color:)var\\(--lyrics-color-active\\)",
+                "var\\(--lyrics-color-background\\)",
+                "(iq4cgi0YEKr6DGaTtzUj{color:)var\\(--lyrics-color-inactive\\)"
+            ],
+            "replace": [
+                "$1$pasttextR",
+                "$1$currentR",
+                "$1$nextR",
+                "$1$hoverR",
+                "$backgroundR",
+                "1$maxmatchR"
+            ]
         },
         "navaltfix": {
             "version": {
@@ -132,8 +204,8 @@
                 "from": "1.1.92",
                 "do": ""
             },
-            "match": "(\\[a\\.go\\.en,)(.+?\\])",
-            "replace": "$1a.go.ru]"
+            "match": "(\\[(.)\\.go\\.en,)(.+?\\])",
+            "replace": "$1$2.go.ru]"
         },
         "disablesentry": {
             "version": {
@@ -308,8 +380,8 @@
                 "from": "1.1.94",
                 "do": ""
             },
-            "match": "(Enable the new home structure and navigation\",values:.,default:)(..DISABLED)",
-            "replace": "$1true"
+            "match": "(Enable the new home structure and navigation\",values:.,default:.)(.DISABLED)",
+            "replace": "$1.ENABLED_CENTER"
         },
         "madeforyou": {
             "version": {
