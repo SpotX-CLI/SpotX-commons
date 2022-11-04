@@ -438,6 +438,14 @@
             },
             "match": "(Adds a search box so users are able to filter playlists when trying to add songs to a playlist using the contextmenu\",default:)(!1)",
             "replace": "$1true"
+        },
+        "rightsidebar": {
+            "version": {
+                "from": "1.1.98",
+                "do": ""
+            },
+            "match": "(Enable the view on the right sidebar\",default:)(!1)",
+            "replace": "$1true"
         }
     }
 }
