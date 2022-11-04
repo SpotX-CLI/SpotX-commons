@@ -43,7 +43,7 @@
         "connectold": {
             "version": {
                 "from": "1.1.70",
-                "do": ""
+                "do": "1.1.97"
             },
             "match": [
                 " connect-device-list-item--disabled",
