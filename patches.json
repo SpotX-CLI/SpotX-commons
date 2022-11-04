@@ -104,7 +104,7 @@
                 "from": "1.1.70",
                 "do": "1.1.92"
             },
-            "match": "withQueryParameters(e){return this.queryParameters=e,this}",
+            "match": "withQueryParameters\\(.\\){return this.queryParameters=.,this}",
             "replace": "withQueryParameters(e){return this.queryParameters=(e.types?{...e, types: e.types.split(\",\").filter(_ => ![\"episode\",\"show\"].includes(_)).join(\",\")}:e),this}"
         },
         "podcastsoff2": {
@@ -370,7 +370,7 @@
         "devicepickerold": {
             "version": {
                 "from": "1.1.96",
-                "do": ""
+                "do": "1.1.97"
             },
             "match": "(Enable showing a new and improved device picker UI\",default:)(!0)",
             "replace": "$1false"
