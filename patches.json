@@ -378,6 +378,14 @@
         "newhome": {
             "version": {
                 "from": "1.1.94",
+                "do": "1.1.96"
+            },
+            "match": "(Enable the new home structure and navigation\",values:.,default:.)(.DISABLED)",
+            "replace": "$1true"
+        },
+        "newhome2": {
+            "version": {
+                "from": "1.1.97",
                 "do": ""
             },
             "match": "(Enable the new home structure and navigation\",values:.,default:.)(.DISABLED)",
