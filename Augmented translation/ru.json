@@ -390,7 +390,7 @@
     },
     "100": {
         "match": "\"Create a playlist folder\"",
-        "replace": "\"Создать папку с плейлистом\""
+        "replace": "\"Создать новую папку\""
     },
     "101": {
         "match": "\"Create a new playlist\"",
@@ -402,11 +402,11 @@
     },
     "103": {
         "match": "\"Search Your Library\"",
-        "replace": "\"Поиск в вашей библиотеке\""
+        "replace": "\"Поиск в медиатеке\""
     },
     "104": {
         "match": "\"Your Library\"",
-        "replace": "\"Ваша библиотека\""
+        "replace": "\"Моя медиатека\""
     },
     "105": {
         "match": "Couldn.t find",
