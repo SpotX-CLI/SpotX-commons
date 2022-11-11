@@ -172,12 +172,13 @@
                 " .Root__fixed-top-bar {background-color: #00000000}'"
             ]
         },
-        "collaboraticon": {
+        "collaboration": {
             "version": {
-                "from": "1.1.83",
+                "from": "1.1.73",
                 "do": ""
             },
-            "add": " .X1lXSiVj0pzhQCUo_72A{display:none}"
+            "match": "(permissionLevel:\"CONTRIBUTOR\".+?return)",
+            "replace": "$1 null;"
         },
         "byspotx": {
             "add": "// Patched by SpotX"
