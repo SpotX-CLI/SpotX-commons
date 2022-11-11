@@ -529,6 +529,14 @@
             },
             "match": "(Enable the view on the right sidebar\",default:)(!1)",
             "replace": "$1true"
+        },
+        "audiobooks": {
+            "version": {
+                "from": "1.1.74",
+                "do": ""
+            },
+            "match": "(Enable Audiobooks feature on ClientX\",default:)(!1)",
+            "replace": "$1true"
         }
     }
 }
