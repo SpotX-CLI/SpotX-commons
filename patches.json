@@ -348,13 +348,13 @@
         },
         "copy-playlists": {
             "version": {
-                "from": "1.1.70",
+                "from": "1.1.97.956",
                 "do": ""
             },
             "match": [
                 "(,.=.\\(\\).from\\(.\\).toURLPath\\(!0\\);)(await ..add\\(.,)(.)",
                 "(((,\\(.,..jsxs\\)\\(..Fragment.+?,name:..name).+?displayText:(.....get)\\(\"contextmenu.create-similar-playlist\")(.+?}\\)]}\\)))",
-                "(,\\(.,...jsxs\\)\\(...Fragment,{children:\\[(\\(.+?,name:s.name)(,displayText:\\$s.ag.get)\\(\"contextmenu.create-similar-playlist\".+?}\\)]}\\))",
+                "(,\\(.,...jsxs\\)\\(...Fragment,{children:\\[(\\(.+?,name:..name)(,displayText:......get)\\(\"contextmenu.create-similar-playlist\".+?}\\)]}\\))",
                 "(.)(=.\\|\\|.....get\\(\"playlist.similar-playlist\"\\))"
             ],
             "replace": [
