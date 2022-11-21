@@ -149,7 +149,7 @@
                 "((MEjuIn9iTBQbnCqHpkoQ|H2J92dVdr0ykdOX5azL1){color:)var\\(--lyrics-color-active\\);opacity:\\.{0,1}\\d",
                 "((TDPh45khCfG51fNwNIiw|E64X_eoy6xsJmDdKKHja|arY01KDGhWNgzlAHlhpd){color:)var\\(--lyrics-color-active\\)",
                 "((NHVfxGs2HwmI_fly2JC4|NiCdLCpp3o2z6nBrayOn){color:)var\\(--lyrics-color-inactive\\)",
-                "((NHVfxGs2HwmI_fly2JC4:hover|MEjuIn9iTBQbnCqHpkoQ){color:)var\\(--lyrics-color-(active|passed)\\)",
+                "((NHVfxGs2HwmI_fly2JC4|NiCdLCpp3o2z6nBrayOn):hover{color:)var\\(--lyrics-color-active\\)",
                 "var\\(--lyrics-color-background\\)",
                 "((iq4cgi0YEKr6DGaTtzUj|kGR_hu4tdj9PnUlSPaRL){color:)var\\(--lyrics-color-inactive\\)"
             ],
