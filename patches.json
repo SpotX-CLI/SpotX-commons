@@ -346,24 +346,6 @@
             "match": ",(.\\.isOwnedBySelf&&)((\\(.{0,11}\\)|..createElement)\\(.{1,3}Fragment,.+?{(uri:.|).+?contextmenu.create-similar-playlist\"\\)}\\),)",
             "replace": ",$2$1"
         },
-        "copy-playlists": {
-            "version": {
-                "from": "1.1.97.956",
-                "do": ""
-            },
-            "match": [
-                "(,.=.\\(\\).from\\(.\\).toURLPath\\(!0\\);)(await ..add\\(.,)(.)",
-                "(((,\\(.,..jsxs\\)\\(..Fragment.+?,name:..name).+?displayText:(.....get)\\(\"contextmenu.create-similar-playlist\")(.+?}\\)]}\\)))",
-                "(,\\(.,...jsxs\\)\\(...Fragment,{children:\\[(\\(.+?,name:..name)(,displayText:......get)\\(\"contextmenu.create-similar-playlist\".+?}\\)]}\\))",
-                "(.)(=.\\|\\|.....get\\(\"playlist.similar-playlist\"\\))"
-            ],
-            "replace": [
-                "$1var content=JSON.stringify(i); if (content.includes('copy by spotx')){ var as=n.body.request.trackIDs;var asd=as.map((as=>`spotify:track:${as}`))} else { asd=$3};$2asd",
-                "$1$3+' copy by spotx',displayText:$4(\"ewg.copy\")})]})",
-                "$1,$2+' copy by spotx'$3(\"ewg.copy\")})",
-                "dt$2;var content=JSON.stringify(dt);var content=content.replace(/ copy by spotx/gmi, \"\");var content=content.replace(/.(.+)./gmi, \"$$1\");const $1=content"
-            ]
-        },
         "likedartist": {
             "version": {
                 "from": "1.1.70",
