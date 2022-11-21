@@ -495,7 +495,7 @@
         "clearcache": {
             "version": {
                 "from": "1.1.92",
-                "do": ""
+                "do": "1.1.98"
             },
             "match": "(Enable option in settings to clear all downloads\",default:)(!1)",
             "replace": "$1true"
@@ -554,6 +554,14 @@
                 "do": ""
             },
             "match": "(Enable Audiobooks feature on ClientX\",default:)(!1)",
+            "replace": "$1true"
+        },
+        "addingplaylist": {
+            "version": {
+                "from": "1.1.98",
+                "do": ""
+            },
+            "match": "(Enable support for adding a playlist to another playlist\",default:)(!1)",
             "replace": "$1true"
         }
     }
