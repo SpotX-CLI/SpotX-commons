@@ -530,6 +530,14 @@
             "match": "(Enable the view on the right sidebar\",default:)(!1)",
             "replace": "$1true"
         },
+        "sidebar-fix": {
+            "version": {
+                "from": "1.1.99",
+                "do": ""
+            },
+            "match": "min:320,max:420",
+            "replace": "min:250,max:400"
+        },
         "audiobooks": {
             "version": {
                 "from": "1.1.74",
