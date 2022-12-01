@@ -564,7 +564,7 @@
         },
         "pathfinder": {
             "version": {
-                "from": "1.1.90",
+                "from": "1.1.91",
                 "do": ""
             },
             "match": "(Fetch Browse data from Pathfinder\",default:)(!1)",
