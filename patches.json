@@ -589,6 +589,15 @@
             },
             "match": "(Fetch Browse data from Pathfinder\",default:)(!1)",
             "replace": "$1true"
+        },
+        "lyricssidebar": {
+            "version": {
+                "from": "1.2.0",
+                "do": ""
+            },
+            "match": "(Show lyrics in the right sidebar\",default:)(!1)",
+            "replace": "$1true"
         }
+        
     }
 }
