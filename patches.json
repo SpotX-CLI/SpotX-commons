@@ -374,7 +374,7 @@
         },
         "goofyhistory": {
             "version": {
-                "from": "1.1.86",
+                "from": "1.1.90",
                 "do": ""
             },
             "match": "(function\\((?:.\\)\\{var .=.\\.isPreview,|\\{isPreview:.\\}\\)\\{const )(.)=\\(.+?createDesktopNpbPlayerControlsEventFactory.+?;)",
