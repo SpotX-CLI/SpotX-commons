@@ -179,7 +179,7 @@
             },
             "match": [
                 "(.--lyrics-color-passed.:)(..passed)",
-                "(.--lyrics-color-active.:)(..active)",
+                "(.--lyrics-color-active.:)((?:.\\?.\\.passed:.|.).active)",
                 "(.--lyrics-color-inactive.:)(..inactive)",
                 "(.--lyrics-color-background.:)(..background)"
             ],
