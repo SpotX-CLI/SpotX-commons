@@ -299,6 +299,14 @@
                     "hover": "#D1D1D1",
                     "background": "#13101C",
                     "maxmatch": "#534D6F"
+                },
+                "brown": {
+                    "pasttext": "#E40909B3",
+                    "current": "#C2C2C2",
+                    "next": "#CA861A",
+                    "hover": "#0FD40F",
+                    "background": "#121212",
+                    "maxmatch": "#C2C2C2"
                 }
             }
         },
