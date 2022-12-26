@@ -330,16 +330,36 @@
                 "do": ""
             },
             "match": [
+                "(.--lyrics-color-background.:..background)",
                 "(.--lyrics-color-passed.:)(..passed)",
                 "(.--lyrics-color-active.:)((?:.\\?.\\.passed:.|.).active)",
                 "(.--lyrics-color-inactive.:)(..inactive)",
-                "(.--lyrics-color-background.:)(..background)"
+                "(.--lyrics-color-background.:)(..background)",
+                "(.--lyrics-color-hover.:)(\"xxx\")",
+                "(.--lyrics-color-maxmatch.:)(\"xxx\")"
             ],
             "replace": [
+                "$1,\"--lyrics-color-hover\":\"xxx\",\"--lyrics-color-maxmatch\":\"xxx\"",
+                "",
+                "",
                 "",
                 "",
                 "",
                 ""
+            ]
+        },
+        "fixcsslyricscolor2": {
+            "version": {
+                "from": "1.1.99",
+                "do": ""
+            },
+            "match": [
+                "(:hover{color:var)\\(--lyrics-color-active\\)",
+                "(kGR_hu4tdj9PnUlSPaRL{color:var)\\(--lyrics-color-inactive\\)"
+            ],
+            "replace": [
+                "$1(--lyrics-color-hover)!important",
+                "$1(--lyrics-color-maxmatch)!important"
             ]
         },
         "navaltfix": {
