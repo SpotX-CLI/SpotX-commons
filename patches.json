@@ -224,7 +224,7 @@
                     "pasttext": "#AD82F8",
                     "current": "#7EE787",
                     "next": "#47566D",
-                    "hover": "##70B3FF",
+                    "hover": "#70B3FF",
                     "background": "#161B22",
                     "maxmatch": "#408BD0"
                 },
@@ -232,7 +232,7 @@
                     "pasttext": "#616774",
                     "current": "#7A8FDC",
                     "next": "#616774",
-                    "hover": "##FFFFFF",
+                    "hover": "#FFFFFF",
                     "background": "#23272A",
                     "maxmatch": "#616774"
                 },
@@ -240,7 +240,7 @@
                     "pasttext": "#505050",
                     "current": "#F37171",
                     "next": "#505050",
-                    "hover": "##A13131",
+                    "hover": "#A13131",
                     "background": "#191414",
                     "maxmatch": "#787878"
                 },
@@ -248,7 +248,7 @@
                     "pasttext": "#505050",
                     "current": "#AEF97B",
                     "next": "#505050",
-                    "hover": "##418022",
+                    "hover": "#418022",
                     "background": "#141914",
                     "maxmatch": "#787878"
                 },
@@ -256,7 +256,7 @@
                     "pasttext": "#505050",
                     "current": "#50DCF0",
                     "next": "#505050",
-                    "hover": "##0B7383",
+                    "hover": "#0B7383",
                     "background": "#14191E",
                     "maxmatch": "#787878"
                 },
@@ -264,7 +264,7 @@
                     "pasttext": "#4E596F",
                     "current": "#F67064",
                     "next": "#4E596F",
-                    "hover": "##FFFFFF",
+                    "hover": "#FFFFFF",
                     "background": "#202430",
                     "maxmatch": "#9EA8BC"
                 },
@@ -272,7 +272,7 @@
                     "pasttext": "#9579E3",
                     "current": "#CD3B99",
                     "next": "#5E547C",
-                    "hover": "##FFFFFF",
+                    "hover": "#FFFFFF",
                     "background": "#1C1925",
                     "maxmatch": "#5E547C"
                 },
@@ -280,7 +280,7 @@
                     "pasttext": "#5C89D2",
                     "current": "#01C38D",
                     "next": "#696E79",
-                    "hover": "##FFFFFF",
+                    "hover": "#FFFFFF",
                     "background": "#191E29",
                     "maxmatch": "#696E79"
                 },
@@ -288,7 +288,7 @@
                     "pasttext": "#1CAAC6",
                     "current": "#90E0F0",
                     "next": "#516377",
-                    "hover": "##A0D1FA",
+                    "hover": "#A0D1FA",
                     "background": "#232937",
                     "maxmatch": "#516377"
                 },
@@ -296,7 +296,7 @@
                     "pasttext": "#C9A8FE",
                     "current": "#9D65C7",
                     "next": "#534D6F",
-                    "hover": "##D1D1D1",
+                    "hover": "#D1D1D1",
                     "background": "#13101C",
                     "maxmatch": "#534D6F"
                 }
