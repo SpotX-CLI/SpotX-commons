@@ -793,6 +793,55 @@
             },
             "match": "(Show lyrics in the right sidebar\",default:)(!1)",
             "replace": "$1true"
+        },
+        "badbunny": {
+            "version": {
+                "from": "1.1.99",
+                "do": ""
+            },
+            "match": "(Enable a different heart button for Bad Bunny\",default:)(!1)",
+            "replace": "$1true"
+        },
+        "devicelocal": {
+            "version": {
+                "from": "1.1.99",
+                "do": ""
+            },
+            "match": "(Enable splitting the device list based on local network\",default:)(!1)",
+            "replace": "$1true"
+        },
+        "silencetrimmer": {
+            "version": {
+                "from": "1.1.99",
+                "do": ""
+            },
+            "match": "(Enable silence trimming in podcasts\",default:)(!1)",
+            "replace": "$1true"
+        },
+        "forgetdevice": {
+            "version": {
+                "from": "1.2.0",
+                "do": ""
+            },
+            "match": "(Enable the option to Forget Devices\",default:)(!1)",
+            "replace": "$1true"
+        },
+        "speedpodcasts": {
+            "version": {
+                "from": "1.2.0",
+                "do": ""
+            },
+            "match": "(playback speed range from 0.5-3.5 with every 0.1 increment\",default:)(!1)",
+            "replace": "$1true"
+        }
+        ,
+        "showfollows": {
+            "version": {
+                "from": "1.2.1",
+                "do": ""
+            },
+            "match": "(Enable a setting to control if followers and following lists are shown on profile\",default:)(!1)",
+            "replace": "$1true"
         }
     }
 }
