@@ -132,20 +132,20 @@
         "replace": "\"Нет\""
     },
     "33": {
-        "match": "",
-        "replace": ""
+        "match": "\"Unpin podcast\"",
+        "replace": "\"Открепить подкаст\""
     },
     "34": {
-        "match": "",
-        "replace": ""
+        "match": "\"Unpin audiobook\"",
+        "replace": "\"Открепить аудиокнигу\""
     },
     "35": {
-        "match": "",
-        "replace": ""
+        "match": "\"Rename\"",
+        "replace": "\"Переименовать\""
     },
     "36": {
-        "match": "",
-        "replace": ""
+        "match": "\"Recents\"",
+        "replace": "\"Недавние\""
     },
     "37": {
         "match": "\"Your Location\"",
@@ -446,7 +446,7 @@
     },
     "113": {
         "match": "\"Now Playing View\"",
-        "replace": "\"Сейчас играет обзор\""
+        "replace": "\"Сейчас играет\""
     },
     "114": {
         "match": "\"Show my follower and following lists on my public profile\"",
@@ -490,22 +490,6 @@
     },
     "124": {
         "match": "\"Unpin artist\"",
-        "replace": "\"Открепить артиста\""
-    },
-    "125": {
-        "match": "\"Unpin podcast\"",
-        "replace": "\"Открепить подкаст\""
-    },
-    "126": {
-        "match": "\"Unpin audiobook\"",
-        "replace": "\"Открепить аудиокнигу\""
-    },
-    "127": {
-        "match": "\"Rename\"",
-        "replace": "\"Переименовать\""
-    },
-    "128": {
-        "match": "\"Recents\"",
-        "replace": "\"Недавние\""
+        "replace": "\"Открепить исполнителя\""
     }
 }
