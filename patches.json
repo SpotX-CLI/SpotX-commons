@@ -1,7 +1,7 @@
 {
     "free": {
         "bilboard": {
-            "versions": {
+            "version": {
                 "from": "1.1.70",
                 "do": ""
             },
@@ -9,7 +9,7 @@
             "replace": "false$1"
         },
         "fullscreen": {
-            "versions": {
+            "version": {
                 "from": "1.1.58",
                 "do": ""
             },
