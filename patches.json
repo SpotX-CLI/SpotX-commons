@@ -320,7 +320,7 @@
         },
         "lyricscolor1": {
             "version": {
-                "from": "1.1.84",
+                "from": "1.1.85",
                 "do": "1.1.98"
             },
             "match": [
