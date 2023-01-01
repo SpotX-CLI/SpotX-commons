@@ -320,16 +320,16 @@
         },
         "lyricscolor1": {
             "version": {
-                "from": "1.1.70",
+                "from": "1.1.85",
                 "do": "1.1.98"
             },
             "match": [
-                "((MEjuIn9iTBQbnCqHpkoQ|H2J92dVdr0ykdOX5azL1){color:)var\\(--lyrics-color-(active\\);opacity:\\.{0,1}\\d|passed\\))",
-                "((TDPh45khCfG51fNwNIiw|E64X_eoy6xsJmDdKKHja|arY01KDGhWNgzlAHlhpd){color:)var\\(--lyrics-color-active\\)",
-                "((NHVfxGs2HwmI_fly2JC4|NiCdLCpp3o2z6nBrayOn){color:)var\\(--lyrics-color-inactive\\)",
+                "((MEjuIn9iTBQbnCqHpkoQ|H2J92dVdr0ykdOX5azL1|KnFq2ijXFdOtyl4Iebjv){color:)var\\(--lyrics-color-(active\\);opacity:\\.{0,1}\\d|passed\\))",
+                "((TDPh45khCfG51fNwNIiw|E64X_eoy6xsJmDdKKHja|arY01KDGhWNgzlAHlhpd|t0iEG6xYBDhK_mFvkCp0){color:)var\\(--lyrics-color-active\\)",
+                "((NHVfxGs2HwmI_fly2JC4|NiCdLCpp3o2z6nBrayOn|gaHIufRWhoWbiT8S6zuM){color:)var\\(--lyrics-color-inactive\\)",
                 "var\\(--lyrics-color-background\\)",
-                "((NHVfxGs2HwmI_fly2JC4|NiCdLCpp3o2z6nBrayOn):hover{color:)var\\(--lyrics-color-active\\)",
-                "((iq4cgi0YEKr6DGaTtzUj|kGR_hu4tdj9PnUlSPaRL){color:)var\\(--lyrics-color-inactive\\)"
+                "((NHVfxGs2HwmI_fly2JC4|NiCdLCpp3o2z6nBrayOn|gaHIufRWhoWbiT8S6zuM):hover{color:)var\\(--lyrics-color-active\\)",
+                "((iq4cgi0YEKr6DGaTtzUj|kGR_hu4tdj9PnUlSPaRL|W_EplVEAbZrZURqfLiQC|OYiGFGZJDIZ4FF4ZTDK2){color:)var\\(--lyrics-color-inactive\\)"
             ],
             "replace": [
                 "",
@@ -616,6 +616,14 @@
                 "do": ""
             },
             "match": "(Enable Playlist Permissions flows for Prod\",default:)(!1)",
+            "replace": "$1true"
+        },
+        "newlyrics": {
+            "version": {
+                "from": "1.1.83",
+                "do": "1.1.86"
+            },
+            "match": "(Enable the new fullscreen lyrics page\",default:)(!1)",
             "replace": "$1true"
         },
         "showingballoons": {
