@@ -320,7 +320,7 @@
         },
         "lyricscolor1": {
             "version": {
-                "from": "1.1.85",
+                "from": "1.1.84",
                 "do": "1.1.98"
             },
             "match": [
@@ -620,7 +620,7 @@
         },
         "newlyrics": {
             "version": {
-                "from": "1.1.83",
+                "from": "1.1.84",
                 "do": "1.1.86"
             },
             "match": "(Enable the new fullscreen lyrics page\",default:)(!1)",
