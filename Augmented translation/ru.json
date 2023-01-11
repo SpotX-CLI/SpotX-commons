@@ -1,6 +1,6 @@
 {
     "lang": {
-        "version": "1.2.1.968.g21027577",
+        "version": "1.2.2.582.gfae9c59b",
         "language": "Russian"
     },
     "1": {
@@ -449,8 +449,8 @@
         "replace": "\"Сейчас играет\""
     },
     "114": {
-        "match": "\"Show my follower and following lists on my public profile\"",
-        "replace": "\"Показать моих подписчиков и списки подписчиков в моем публичном профиле\""
+        "match": "\"In progress\"",
+        "replace": "\"В процессе\""
     },
     "115": {
         "match": "\"Pin audiobook\"",
@@ -488,8 +488,24 @@
         "match": "\"Unpin album\"",
         "replace": "\"Открепить альбом\""
     },
-    "124": {
+    "125": {
         "match": "\"Unpin artist\"",
         "replace": "\"Открепить исполнителя\""
+    },
+    "126": {
+        "match": "\"Go back\"",
+        "replace": "\"Вернуться\""
+    },
+    "127": {
+        "match": "\"Start adding playlists by dragging and dropping\"",
+        "replace": "\"Начните добавлять плейлисты, перетаскивая и отпуская.\""
+    },
+    "128": {
+        "match": "\"This folder looks empty\"",
+        "replace": "\"Эта папка выглядит пустой\""
+    },
+    "129": {
+        "match": "\"(... )Tour Dates\"",
+        "replace": "\"$1Даты тура\""
     }
 }
