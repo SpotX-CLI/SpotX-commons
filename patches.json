@@ -308,13 +308,13 @@
                     "background": "#13101C",
                     "maxmatch": "#534D6F"
                 },
-                "brown": {
-                    "pasttext": "#E40909B3",
-                    "current": "#C2C2C2",
-                    "next": "#CA861A",
-                    "hover": "#0FD40F",
+                "relish": {
+                    "pasttext": "#9D2117",
+                    "current": "#C8C8C8",
+                    "next": "#C8A032",
+                    "hover": "#E5CB8B",
                     "background": "#121212",
-                    "maxmatch": "#C2C2C2"
+                    "maxmatch": "#787878"
                 }
             }
         },
