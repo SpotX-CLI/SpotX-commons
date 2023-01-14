@@ -701,7 +701,7 @@
         "newhome2": {
             "version": {
                 "from": "1.1.97",
-                "do": ""
+                "do": "1.2.2"
             },
             "match": "(Enable the new home structure and navigation\",values:.,default:.)(.DISABLED)",
             "replace": "$1.ENABLED_CENTER"
